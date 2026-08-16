@@ -1,5 +1,6 @@
 package app;
 
+import data.DataStore;
 import models.Cours;
 import models.Student;
 
@@ -13,6 +14,9 @@ public class Main {
 
         List<Student> student = new ArrayList<>();
         List<Cours> cours = new ArrayList<>();
+
+
+
 
         student.add( new Student(1L, "Juan", "alvarez", "juan@gmail.com", "5552020"));
         student.add( new Student(2L, "Alejo", "Smith", "alejo@cesde.com", "4455050"));
@@ -35,6 +39,14 @@ public class Main {
         for(Cours courses : cours) {
             System.out.println("ID: " + courses.getId() + ", Code: " + courses.getCode() + ", Name: " + courses.getName() + ", Description: " + courses.getDescription() + ", Capacity: " + courses.getCapacity());
         }
+
+        DataStore dataStore = new DataStore();
+       // DataInitialization.loadData(dataStore);
+
+
+
+
+
 
     }
 }
