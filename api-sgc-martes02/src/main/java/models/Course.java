@@ -1,6 +1,6 @@
 package models;
 
-public class Cours {
+public class Course {
 
     private long id;
     private String code;
@@ -9,7 +9,7 @@ public class Cours {
     private int capacity;
 
 
-    public Cours(long id, String code, String name, String description, int capacity) {
+    public Course(long id, String code, String name, String description, int capacity) {
         this.id = id;
         this.code = code;
         this.name = name;

@@ -3,15 +3,19 @@ package data;
 import java.util.ArrayList;
 import java.util.List;
 
-import models.Cours;
+import models.Course;
 import models.Student;
+import models.Enrollement; // Agregar a los imports
 
 
 public class DataStore {
 
     private List<Student> listStudent= new ArrayList<>();
-    private List<Cours> listCours = new ArrayList<>();
+    private List<Course> listCours = new ArrayList<>();
 
+
+    // ... dentro de tu clase DataStore, junto a las otras listas:
+    private List<Enrollement> listEnrollement = new ArrayList<>();
 
 
 
@@ -52,42 +56,80 @@ public class DataStore {
 
     // ==================== COURS METHODS ====================
 
-    public List<Cours> getCoursList() {
+    public List<Course> getCoursList() {
         return listCours;
     }
 
-    public Cours getCours(Long id) {
-        for (Cours cours : listCours) {
-            if (cours.getId() == (id)) {
-                return cours;
+    public Course getCours(Long id) {
+        for (Course course : listCours) {
+            if (course.getId() == (id)) {
+                return course;
             }
         }
         return null;
     }
 
-    public void addCours(Cours cours) {
-        listCours.add(cours);
+    public void addCours(Course course) {
+        listCours.add(course);
     }
 
     public void removeCours(Long id) {
-        Cours cours = getCours(id);
-        if (cours != null) {
-            listCours.remove(cours);
+        Course course = getCours(id);
+        if (course != null) {
+            listCours.remove(course);
         }
     }
 
-    public void updateCours(Long id, Cours updatedCours) {
-        Cours existingCours = getCours(id);
-        if (existingCours != null) {
-            existingCours.setCode(updatedCours.getCode());
-            existingCours.setName(updatedCours.getName());
-            existingCours.setDescription(updatedCours.getDescription());
-            existingCours.setCapacity(updatedCours.getCapacity());
+    public void updateCours(Long id, Course updatedCourse) {
+        Course existingCourse = getCours(id);
+        if (existingCourse != null) {
+            existingCourse.setCode(updatedCourse.getCode());
+            existingCourse.setName(updatedCourse.getName());
+            existingCourse.setDescription(updatedCourse.getDescription());
+            existingCourse.setCapacity(updatedCourse.getCapacity());
         }
     }
 
     // ==================== ENROLLEMENT METHODS ====================
 
+
+    // READ ALL
+    public List<Enrollement> getEnrollementList() {
+        return listEnrollement;
+    }
+
+    // READ ONE
+    public Enrollement getEnrollement(Long id) {
+        for (Enrollement enrollement : listEnrollement) {
+            if (enrollement.getId().equals(id)) {
+                return enrollement;
+            }
+        }
+        return null; // Retorna null si no lo encuentra
+    }
+
+    // CREATE
+    public void addEnrollement(Enrollement enrollement) {
+        listEnrollement.add(enrollement);
+    }
+
+    // DELETE
+    public void removeEnrollement(Long id) {
+        Enrollement enrollement = getEnrollement(id);
+        if (enrollement != null) {
+            listEnrollement.remove(enrollement);
+        }
+    }
+
+    // UPDATE
+    public void updateEnrollement(Long id, Enrollement updatedEnrollement) {
+        Enrollement existingEnrollement = getEnrollement(id);
+        if (existingEnrollement != null) {
+            existingEnrollement.setStudentName(updatedEnrollement.getStudentName());
+            existingEnrollement.setEnrollementDate(updatedEnrollement.getEnrollementDate());
+            existingEnrollement.setState(updatedEnrollement.isState());
+        }
+    }
 
 
 

@@ -1,0 +1,13 @@
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+submodule.active=.
+remote.origin.url=https://github.com/CalejandroGomez/api-sgc-martes02.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+user.name=Alejo
+user.email=calejandro.gomez15@gmail.com

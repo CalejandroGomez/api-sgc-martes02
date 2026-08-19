@@ -8,6 +8,7 @@ public class Enrollement {
     private DateTimeAtCreation enrollementDate;
     private boolean state;
 
+
     public Enrollement(Long id, String studentName, DateTimeAtCreation enrollementDate, boolean state) {
         this.id = id;
         this.studentName = studentName;
