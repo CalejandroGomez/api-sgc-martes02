@@ -18,7 +18,7 @@ public class DataStore {
     private List<Enrollement> listEnrollement = new ArrayList<>();
 
 
-
+    //
     public List<Student> getStudentList() {
         return listStudent;
     }
@@ -30,11 +30,12 @@ public class DataStore {
         }
         return null;
     }
-
+    //Agregar estudiante
     public void addStudent(Student student) {
         listStudent.add(student);
     }
 
+    // remove
     public void removeStudent(Long id) {
         Student student = getStudent(id);
         if (student != null) {
