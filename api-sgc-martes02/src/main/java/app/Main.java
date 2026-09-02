@@ -4,6 +4,11 @@ import data.DataStore;
 import models.Course;
 import models.Student;
 import models.Enrollement;
+import presentation.StudentConsole;
+import repositories.StudentRepository;
+import repositories.impl.StudentRepositoryImpl;
+import service.StudentService;
+import service.impl.StudentServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +19,12 @@ public class Main {
     public static void main(String[] args) {
 
              DataStore dataStore = new DataStore();
+        StudentRepository studentRepository = new StudentRepositoryImpl(dataStore.getStudentList());
+        StudentService studentService = new StudentServiceImpl(studentRepository);
+        StudentConsole studentConsole = new StudentConsole(studentService);
+
+        studentConsole.createStudent();
+        studentConsole.listStudent();
 
 
 
@@ -39,7 +50,7 @@ public class Main {
         for(Course courses : cours) {
             System.out.println("ID: " + courses.getId() + ", Code: " + courses.getCode() + ", Name: " + courses.getName() + ", Description: " + courses.getDescription() + ", Capacity: " + courses.getCapacity());
         }
-        */
+
 
 
 
@@ -68,6 +79,11 @@ public class Main {
                     ", Date: " + enrollement.getEnrollementDate() +
                     ", State: " + enrollement.isState());
         });
+
+        */
+
+
+
 
 
 
