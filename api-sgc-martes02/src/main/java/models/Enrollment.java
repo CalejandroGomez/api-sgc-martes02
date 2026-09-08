@@ -2,14 +2,14 @@ package models;
 
 import javax.print.attribute.standard.DateTimeAtCreation;
 
-public class Enrollement {
+public class Enrollment {
     private Long id;
     private String studentName;
     private DateTimeAtCreation enrollementDate;
     private boolean state;
 
 
-    public Enrollement(Long id, String studentName, DateTimeAtCreation enrollementDate, boolean state) {
+    public Enrollment(Long id, String studentName, DateTimeAtCreation enrollementDate, boolean state) {
         this.id = id;
         this.studentName = studentName;
         this.enrollementDate = enrollementDate;
@@ -46,5 +46,15 @@ public class Enrollement {
 
     public void setState(boolean state) {
         this.state = state;
+    }
+
+    @Override
+    public String toString() {
+        return "Enrollement{" +
+                "id=" + id +
+                ", studentName='" + studentName + '\'' +
+                ", enrollementDate=" + enrollementDate +
+                ", state=" + state +
+                '}';
     }
 }

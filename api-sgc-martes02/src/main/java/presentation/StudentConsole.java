@@ -40,9 +40,4 @@ public class StudentConsole {
         List<Student> students = studentService.findAll();
         students.forEach(System.out::print);
     }
-
-
-
-
-
 }

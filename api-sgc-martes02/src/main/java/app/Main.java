@@ -1,24 +1,35 @@
 package app;
 
 import data.DataStore;
-import models.Course;
-import models.Student;
-import models.Enrollement;
+
+// Presentation
 import presentation.StudentConsole;
+import presentation.CourseConsole;
+import presentation.EnrollmentConsole;
+
+// Repositories
 import repositories.StudentRepository;
 import repositories.impl.StudentRepositoryImpl;
+import repositories.CourseRepository;
+import repositories.impl.CourseRepositoryImpl;
+import repositories.EnrollmentRepository;
+import repositories.impl.EnrollmentRepositoryImpl;
+
+// Services
 import service.StudentService;
 import service.impl.StudentServiceImpl;
-
-import java.util.ArrayList;
-import java.util.List;
+import service.CourseService;
+import service.impl.CourseServiceImpl;
+import service.EnrollmentService;
+import service.impl.EnrollmentServiceImpl;
 
 public class Main {
 
-
     public static void main(String[] args) {
 
-             DataStore dataStore = new DataStore();
+        DataStore dataStore = new DataStore();
+
+        // 1. Student Setup
         StudentRepository studentRepository = new StudentRepositoryImpl(dataStore.getStudentList());
         StudentService studentService = new StudentServiceImpl(studentRepository);
         StudentConsole studentConsole = new StudentConsole(studentService);
@@ -26,7 +37,23 @@ public class Main {
         studentConsole.createStudent();
         studentConsole.listStudent();
 
+        // 2. Course Setup (Matches dataStore.getCoursList())
+        CourseRepository courseRepository = new CourseRepositoryImpl(dataStore.getCoursList());
+        CourseService courseService = new CourseServiceImpl(courseRepository);
+        CourseConsole courseConsole = new CourseConsole(courseService);
 
+        // 3. Enrollment Setup (Matches dataStore.getEnrollementList())
+        EnrollmentRepository enrollmentRepository = new EnrollmentRepositoryImpl(dataStore.getEnrollementList());
+        EnrollmentService enrollmentService = new EnrollmentServiceImpl(enrollmentRepository);
+        EnrollmentConsole enrollmentConsole = new EnrollmentConsole(enrollmentService);
+
+        // Course Execution
+        courseConsole.createCourse();
+        courseConsole.listCourse();
+
+        // Enrollment Execution
+        enrollmentConsole.createEnrollment();
+        enrollmentConsole.listEnrollment();
 
 /*
         student.add( new Student(1L, "Juan", "alvarez", "juan@gmail.com", "5552020"));
@@ -81,12 +108,5 @@ public class Main {
         });
 
         */
-
-
-
-
-
-
-
     }
 }

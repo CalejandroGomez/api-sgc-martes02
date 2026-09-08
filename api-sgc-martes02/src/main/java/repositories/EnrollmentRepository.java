@@ -1,14 +1,14 @@
 package repositories;
 
-import models.Enrollement;
+import models.Enrollment;
 
 import java.util.List;
 
 public interface EnrollmentRepository {
 
-    void save (Enrollement enrollement);
-    Enrollement findById (Long id);
-    Enrollement deleteById (Long id);
-    List<Enrollement> findAll ();
+    void save (Enrollment enrollment);
+    Enrollment findById (Long id);
+    Enrollment deleteById (Long id);
+    List<Enrollment> findAll ();
 
 }

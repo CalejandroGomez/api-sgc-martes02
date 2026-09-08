@@ -5,7 +5,7 @@ import java.util.List;
 
 import models.Course;
 import models.Student;
-import models.Enrollement; // Agregar a los imports
+import models.Enrollment; // Agregar a los imports
 
 
 public class DataStore {
@@ -15,7 +15,7 @@ public class DataStore {
 
 
     // ... dentro de tu clase DataStore, junto a las otras listas:
-    private List<Enrollement> listEnrollement = new ArrayList<>();
+    private List<Enrollment> listEnrollment = new ArrayList<>();
 
 
     //
@@ -95,44 +95,42 @@ public class DataStore {
 
 
     // READ ALL
-    public List<Enrollement> getEnrollementList() {
-        return listEnrollement;
+    public List<Enrollment> getEnrollementList() {
+        return listEnrollment;
     }
 
     // READ ONE
-    public Enrollement getEnrollement(Long id) {
-        for (Enrollement enrollement : listEnrollement) {
-            if (enrollement.getId().equals(id)) {
-                return enrollement;
+    public Enrollment getEnrollement(Long id) {
+        for (Enrollment enrollment : listEnrollment) {
+            if (enrollment.getId().equals(id)) {
+                return enrollment;
             }
         }
         return null; // Retorna null si no lo encuentra
     }
 
     // CREATE
-    public void addEnrollement(Enrollement enrollement) {
-        listEnrollement.add(enrollement);
+    public void addEnrollement(Enrollment enrollment) {
+        listEnrollment.add(enrollment);
     }
 
     // DELETE
     public void removeEnrollement(Long id) {
-        Enrollement enrollement = getEnrollement(id);
-        if (enrollement != null) {
-            listEnrollement.remove(enrollement);
+        Enrollment enrollment = getEnrollement(id);
+        if (enrollment != null) {
+            listEnrollment.remove(enrollment);
         }
     }
 
     // UPDATE
-    public void updateEnrollement(Long id, Enrollement updatedEnrollement) {
-        Enrollement existingEnrollement = getEnrollement(id);
-        if (existingEnrollement != null) {
-            existingEnrollement.setStudentName(updatedEnrollement.getStudentName());
-            existingEnrollement.setEnrollementDate(updatedEnrollement.getEnrollementDate());
-            existingEnrollement.setState(updatedEnrollement.isState());
+    public void updateEnrollement(Long id, Enrollment updatedEnrollment) {
+        Enrollment existingEnrollment = getEnrollement(id);
+        if (existingEnrollment != null) {
+            existingEnrollment.setStudentName(updatedEnrollment.getStudentName());
+            existingEnrollment.setEnrollementDate(updatedEnrollment.getEnrollementDate());
+            existingEnrollment.setState(updatedEnrollment.isState());
         }
     }
-
-
 
 }
 
