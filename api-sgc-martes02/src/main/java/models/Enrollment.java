@@ -5,14 +5,14 @@ import javax.print.attribute.standard.DateTimeAtCreation;
 public class Enrollment {
     private Long id;
     private String studentName;
-    private DateTimeAtCreation enrollementDate;
+    private DateTimeAtCreation enrollmentDate;
     private boolean state;
 
 
-    public Enrollment(Long id, String studentName, DateTimeAtCreation enrollementDate, boolean state) {
+    public Enrollment(Long id, String studentName, DateTimeAtCreation enrollmentDate, boolean state) {
         this.id = id;
         this.studentName = studentName;
-        this.enrollementDate = enrollementDate;
+        this.enrollmentDate = enrollmentDate;
         this.state = state;
     }
 
@@ -24,8 +24,8 @@ public class Enrollment {
         return studentName;
     }
 
-    public DateTimeAtCreation getEnrollementDate() {
-        return enrollementDate;
+    public DateTimeAtCreation getEnrollmentDate() {
+        return enrollmentDate;
     }
 
     public boolean isState() {
@@ -40,8 +40,8 @@ public class Enrollment {
         this.studentName = studentName;
     }
 
-    public void setEnrollementDate(DateTimeAtCreation enrollementDate) {
-        this.enrollementDate = enrollementDate;
+    public void setEnrollmentDate(DateTimeAtCreation enrollmentDate) {
+        this.enrollmentDate = enrollmentDate;
     }
 
     public void setState(boolean state) {
@@ -50,10 +50,10 @@ public class Enrollment {
 
     @Override
     public String toString() {
-        return "Enrollement{" +
+        return "Enrollment{" +
                 "id=" + id +
                 ", studentName='" + studentName + '\'' +
-                ", enrollementDate=" + enrollementDate +
+                ", enrollmentDate=" + enrollmentDate +
                 ", state=" + state +
                 '}';
     }

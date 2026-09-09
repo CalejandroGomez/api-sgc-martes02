@@ -1,7 +1,10 @@
 package presentation;
 
+import models.Course;
+import models.Student;
 import service.CourseService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class CourseConsole {
@@ -26,6 +29,11 @@ public class CourseConsole {
 
 
 
+    }
+    public void listCourse(){
+
+        List<Course> course= courseService.findAll();
+        course.forEach(System.out::print);
     }
 
 }

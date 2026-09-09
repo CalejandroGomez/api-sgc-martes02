@@ -127,7 +127,7 @@ public class DataStore {
         Enrollment existingEnrollment = getEnrollement(id);
         if (existingEnrollment != null) {
             existingEnrollment.setStudentName(updatedEnrollment.getStudentName());
-            existingEnrollment.setEnrollementDate(updatedEnrollment.getEnrollementDate());
+            existingEnrollment.setEnrollmentDate(updatedEnrollment.getEnrollmentDate());
             existingEnrollment.setState(updatedEnrollment.isState());
         }
     }

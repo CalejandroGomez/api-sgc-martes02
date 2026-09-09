@@ -21,7 +21,7 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 
     @Override
     public Enrollment findById(Long id) {
-        return Enrollment;
+        return enrollmentRepository.findById(id);
     }
 
     @Override
