@@ -1,27 +1,27 @@
-package app;
+package org.example.apisgcmartes02.app;
 
-import data.DataStore;
+import org.example.apisgcmartes02.data.DataStore;
 
 // Presentation
-import presentation.StudentConsole;
-import presentation.CourseConsole;
-import presentation.EnrollmentConsole;
+import org.example.apisgcmartes02.presentation.StudentConsole;
+import org.example.apisgcmartes02.presentation.CourseConsole;
+import org.example.apisgcmartes02.presentation.EnrollmentConsole;
 
 // Repositories
-import repositories.StudentRepository;
-import repositories.impl.StudentRepositoryImpl;
-import repositories.CourseRepository;
-import repositories.impl.CourseRepositoryImpl;
-import repositories.EnrollmentRepository;
-import repositories.impl.EnrollmentRepositoryImpl;
+import org.example.apisgcmartes02.repositories.StudentRepository;
+import org.example.apisgcmartes02.repositories.impl.StudentRepositoryImpl;
+import org.example.apisgcmartes02.repositories.CourseRepository;
+import org.example.apisgcmartes02.repositories.impl.CourseRepositoryImpl;
+import org.example.apisgcmartes02.repositories.EnrollmentRepository;
+import org.example.apisgcmartes02.repositories.impl.EnrollmentRepositoryImpl;
 
 // Services
-import service.StudentService;
-import service.impl.StudentServiceImpl;
-import service.CourseService;
-import service.impl.CourseServiceImpl;
-import service.EnrollmentService;
-import service.impl.EnrollmentServiceImpl;
+import org.example.apisgcmartes02.service.StudentService;
+import org.example.apisgcmartes02.service.impl.StudentServiceImpl;
+import org.example.apisgcmartes02.service.CourseService;
+import org.example.apisgcmartes02.service.impl.CourseServiceImpl;
+import org.example.apisgcmartes02.service.EnrollmentService;
+import org.example.apisgcmartes02.service.impl.EnrollmentServiceImpl;
 
 public class Main {
 

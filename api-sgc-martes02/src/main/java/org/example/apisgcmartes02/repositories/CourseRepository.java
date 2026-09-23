@@ -1,6 +1,6 @@
-package repositories;
+package org.example.apisgcmartes02.repositories;
 
-import models.Course;
+import org.example.apisgcmartes02.models.Course;
 
 import java.util.List;
 

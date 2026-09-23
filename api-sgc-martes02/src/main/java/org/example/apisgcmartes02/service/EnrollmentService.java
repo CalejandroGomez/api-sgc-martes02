@@ -1,6 +1,6 @@
-package service;
+package org.example.apisgcmartes02.service;
 import java.util.List;
-import models.Enrollment;
+import org.example.apisgcmartes02.models.Enrollment;
 
 public interface EnrollmentService {
 

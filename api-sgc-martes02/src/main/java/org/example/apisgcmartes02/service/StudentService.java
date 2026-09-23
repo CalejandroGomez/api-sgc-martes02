@@ -1,14 +1,13 @@
-package repositories;
+package org.example.apisgcmartes02.service;
 
-import models.Student;
+import org.example.apisgcmartes02.models.Student;
 
 import java.util.List;
 
-public interface StudentRepository {
+public interface StudentService {
 
     void save(Student student);
     Student findById(Long id);
     void deleteById(Long id);
     List<Student> findAll();
-
 }

@@ -1,6 +1,6 @@
-package service;
+package org.example.apisgcmartes02.service;
 
-import models.Course;
+import org.example.apisgcmartes02.models.Course;
 import java.util.List;
 
 public interface CourseService {

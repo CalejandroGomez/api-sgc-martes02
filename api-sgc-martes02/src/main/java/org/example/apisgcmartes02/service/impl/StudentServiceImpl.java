@@ -1,12 +1,14 @@
-package service.impl;
+package org.example.apisgcmartes02.service.impl;
 
 
-import models.Student;
-import repositories.StudentRepository;
-import service.StudentService;
+import org.example.apisgcmartes02.models.Student;
+import org.example.apisgcmartes02.repositories.StudentRepository;
+import org.example.apisgcmartes02.service.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
 

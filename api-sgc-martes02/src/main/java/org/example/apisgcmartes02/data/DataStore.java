@@ -1,11 +1,11 @@
-package data;
+package org.example.apisgcmartes02.data;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import models.Course;
-import models.Student;
-import models.Enrollment; // Agregar a los imports
+import org.example.apisgcmartes02.models.Course;
+import org.example.apisgcmartes02.models.Student;
+import org.example.apisgcmartes02.models.Enrollment; // Agregar a los imports
 
 
 public class DataStore {

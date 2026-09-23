@@ -1,8 +1,7 @@
-package presentation;
+package org.example.apisgcmartes02.presentation;
 
-import models.Course;
-import models.Enrollment;
-import service.EnrollmentService;
+import org.example.apisgcmartes02.models.Enrollment;
+import org.example.apisgcmartes02.service.EnrollmentService;
 
 import java.util.List;
 import java.util.Scanner;
