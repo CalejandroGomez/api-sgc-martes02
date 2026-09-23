@@ -3,9 +3,11 @@ package org.example.apisgcmartes02.service.impl;
 import org.example.apisgcmartes02.repositories.EnrollmentRepository;
 import org.example.apisgcmartes02.models.Enrollment;
 import org.example.apisgcmartes02.service.EnrollmentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EnrollmentServiceImpl implements EnrollmentService {
 
     private final EnrollmentRepository enrollmentRepository;
